@@ -1571,7 +1571,7 @@ end
 
 if text == "/start" then
 if not Debn(msg) then
-local Namebot = (database:get(bot_id..'Name:Bot') or 'سون') 
+local Namebot = (database:get(bot_id..'Name:Bot') or 'اوليانو') 
 local BANDA_Msg = { 
 '  🤖╖ أهلآ بك عزيزي أنا بوت '..Namebot..'\n🌐╢ وظيفتي حماية المجموعات\n✅╢ لتفعيل البوت عليك اتباع مايلي \n🔘╢ أضِف البوت إلى مجموعتك\n⚡️╢ ارفعهُ » مشرف\n⬆️╜ سيتم ترقيتك مالك في البوت\n',
 } 
@@ -1960,7 +1960,7 @@ tdcli_function ({ ID = "GetMessage", chat_id_ = msg.chat_id_, message_id_ = tonu
 end
 if text == 'الاصدار' and Debn(msg) then 
 database:del(bot_id..'Srt:Bot') 
-send(msg.chat_id_, msg.id_,' ◍ اصدار سورس سون{ S:12✓}')
+send(msg.chat_id_, msg.id_,' ◍ اصدار سورس اوليانو{ S:12✓}')
 end
 
 if text == 'الـمبرمج بـاندا' then
@@ -2044,7 +2044,7 @@ end
 if text == 'قناه السورس' and Debn(msg) then
 database:del(bot_id..'Srt:Bot') 
 local Text = [[ 
- ◍ من أحسن السورسات على التليجرام سورس سون ◍
+ ◍ من أحسن السورسات على التليجرام سورس اوليانو ◍
 بجد سورس أمان جدا وفي مميزات جامده
 تع نصب بوتك عندنا لو محظور
 خش على تواصل هيدخلك لروم التواصل 
@@ -2563,7 +2563,7 @@ end
 if msg.content_.ID == "MessageChatAddMembers" then 
 if msg.content_.members_[0].id_ == tonumber(bot_id) then 
 print("it is Bot")
-N = (database:get(bot_id.."Name:Bot") or "سون")
+N = (database:get(bot_id.."Name:Bot") or "اوليانو")
 tdcli_function ({ID = "GetUser",user_id_ = bot_id,},function(arg,data) 
 tdcli_function ({ID = "GetUserProfilePhotos",user_id_ = bot_id,offset_ = 0,limit_ = 1},function(extra,result,success) 
 if result.photos_[0] then
@@ -3862,7 +3862,7 @@ local TWEET_Msg = {
 "اخر اغنية سمعتها ?", 
 "تكلم عن نفسك", 
 "ليه انت مش سالك", 
-"ما هيا عيوب سورس سون؟ ", 
+"ما هيا عيوب سورس اوليانو؟ ", 
 "اخر كتاب قرآته", 
 "روايتك المفضله ?", 
 "اخر اكله اكلتها", 
@@ -3878,13 +3878,13 @@ local TWEET_Msg = {
 " ما السيء في هذه الحياة ؟ ", 
 "أجمل شيء حصل معك خلال هذا الاسبوع ؟ ", 
 "سؤال ينرفزك ؟ ", 
-" هل يعجبك سورس سون؟؟ ", 
+" هل يعجبك سورس اوليانو؟؟ ", 
 " اكثر ممثل تحبه ؟ ", 
 "قد تخيلت شي في بالك وصار ؟ ", 
 "شيء عندك اهم من الناس ؟ ", 
 "تفضّل النقاش الطويل او تحب الاختصار ؟ ", 
 "وش أخر شي ضيعته؟ ", 
-"اي رايك في سورس سون؟ ", 
+"اي رايك في سورس اوليانو؟ ", 
 "كم مره حبيت؟ ", 
 " اكثر المتابعين عندك باي برنامج؟", 
 " آخر مره ضربت عشره كانت متى ؟", 
@@ -4534,7 +4534,7 @@ tdcli_function ({ID = "SearchPublicChat",username_ = username}, start_function, 
 end
 if text == 'قناة السورس' then
 local Text = [[ 
-[قناه سورس سون ادخل وتابع الجديد](t.me/ABCDABCDL)
+[قناه سورس اوليانو ادخل وتابع الجديد](t.me/ABCDABCDL)
 ]] 
 keyboard = {}  
 keyboard.inline_keyboard = { 
@@ -4545,7 +4545,7 @@ https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. ms
 end
 if text == '⩹━━━━◍『𝑶𝑳𝑰𝑨𝑵𝑶』◍━━━━⩺' then
 local Text = [[ 
- ◍من أحسن السورسات على التليجرام سورس سون ◍
+ ◍من أحسن السورسات على التليجرام سورس اوليانو ◍
 بجد سورس أمان جدا وفي مميزات جامده
 تع نصب بوتك عندنا لو محظور
 خش على تواصل هيدخلك لروم التواصل 
@@ -4570,9 +4570,9 @@ keyboard.inline_keyboard = {
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/vagwg/7&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
-if text == 'العاب سون' or text == 'العاب مطوره' or text == 'العاب متطوره' then  
+if text == 'العاب اوليانو' or text == 'العاب مطوره' or text == 'العاب متطوره' then  
 local Text = [[  
- ◍ اهلا في قائمه الالعاب المتطوره سورس سون ◍ 
+ ◍ اهلا في قائمه الالعاب المتطوره سورس اوليانو ◍ 
 تفضل اختر لعبه من القائمه 
 ]]  
 keyboard = {}   
@@ -6239,7 +6239,7 @@ end
 
 
 if text == 'الملفات' and Debn(msg) then
-t = ' ◍ ملفات السورس سون↓\n ⩹━━━━◍『𝑶𝑳𝑰𝑨𝑵𝑶』◍━━━━⩺ \n'
+t = ' ◍ ملفات السورس اوليانو↓\n ⩹━━━━◍『𝑶𝑳𝑰𝑨𝑵𝑶』◍━━━━⩺ \n'
 i = 0
 for v in io.popen('ls File_Bot'):lines() do
 if v:match(".lua$") then
@@ -6256,8 +6256,8 @@ if res == 200 then
 local Get_info, res = pcall(JSON.decode,Get_Files);
 vardump(res.plugins_)
 if Get_info then
-local TextS = "\n ◍ اهلا بك في متجر ملفات سون\n ◍ ملفات السورس ↓\n⩹━━━━◍『𝑶𝑳𝑰𝑨𝑵𝑶』◍━━━━⩺\n\n"
-local TextE = "\n⩹━━━━◍『𝑶𝑳𝑰𝑨𝑵𝑶』◍━━━━⩺\n ◍ علامة تعني { ✔️ } ملف مفعل\n ◍ علامة تعني { ✖ } ملف معطل\n ◍ قناة سورس سون↓\n".." ◍ [اضغط هنا لدخول](t.me/ABCDABCDL) \n"
+local TextS = "\n ◍ اهلا بك في متجر ملفات اوليانو\n ◍ ملفات السورس ↓\n⩹━━━━◍『𝑶𝑳𝑰𝑨𝑵𝑶』◍━━━━⩺\n\n"
+local TextE = "\n⩹━━━━◍『𝑶𝑳𝑰𝑨𝑵𝑶』◍━━━━⩺\n ◍ علامة تعني { ✔️ } ملف مفعل\n ◍ علامة تعني { ✖ } ملف معطل\n ◍ قناة سورس اوليانو↓\n".." ◍ [اضغط هنا لدخول](t.me/ABCDABCDL) \n"
 local NumFile = 0
 for name,Info in pairs(res.plugins_) do
 local Check_File_is_Found = io.open("File_Bot/"..name,"r")
@@ -6295,7 +6295,7 @@ os.execute("rm -fr File_Bot/"..file)
 send(msg.chat_id_, msg.id_,t) 
 dofile('BANDA.lua')  
 else
-send(msg.chat_id_, msg.id_," ◍ عذرا الملف لايدعم سورس سون\n") 
+send(msg.chat_id_, msg.id_," ◍ عذرا الملف لايدعم سورس اوليانو\n") 
 end
 return false
 end
@@ -6317,7 +6317,7 @@ chek:close()
 send(msg.chat_id_, msg.id_,t) 
 dofile('BANDA.lua')  
 else
-send(msg.chat_id_, msg.id_," ◍ عذرا الملف لايدعم سورس سون\n") 
+send(msg.chat_id_, msg.id_," ◍ عذرا الملف لايدعم سورس اوليانو\n") 
 end
 return false
 end
@@ -6471,15 +6471,15 @@ send(msg.chat_id_, msg.id_, usertext..status)
 end;end,nil)
 return false 
 end
-if text == ("مسح قائمه سون") and Sudo(msg) then
+if text == ("مسح قائمه اوليانو") and Sudo(msg) then
 database:del(bot_id..'CoSu'..msg.chat_id_)
-send(msg.chat_id_, msg.id_, '\n ◍ تم مسح قائمه سون')
+send(msg.chat_id_, msg.id_, '\n ◍ تم مسح قائمه اوليانو')
 return false
 end
 
-if text == 'قائمه سون' and Sudo(msg) then
+if text == 'قائمه اوليانو' and Sudo(msg) then
 local list = database:smembers(bot_id..'CoSu'..msg.chat_id_)
-t = "\n ◍ قائمه سون\n⩹━━━━◍『𝑶𝑳𝑰𝑨𝑵𝑶』◍━━━━⩺\n"
+t = "\n ◍ قائمه اوليانو\n⩹━━━━◍『𝑶𝑳𝑰𝑨𝑵𝑶』◍━━━━⩺\n"
 for k,v in pairs(list) do
 local username = database:get(bot_id.."user:Name" .. v)
 if username then
@@ -6489,7 +6489,7 @@ t = t..""..k.."- (`"..v.."`)\n"
 end
 end
 if #list == 0 then
-t = " ◍ لا يوجد احد في قائمه سون"
+t = " ◍ لا يوجد احد في قائمه اوليانو"
 end
 send(msg.chat_id_, msg.id_, t)
 return false
@@ -6511,7 +6511,7 @@ end
 send(msg.chat_id_, msg.id_, t)
 end
 
-if text == ("رفع سون") and msg.reply_to_message_id_ and Sudo(msg) then
+if text == ("رفع اوليانو") and msg.reply_to_message_id_ and Sudo(msg) then
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
@@ -6525,15 +6525,15 @@ function start_function(extra, result, success)
 database:sadd(bot_id..'CoSu'..msg.chat_id_, result.sender_user_id_)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
 usertext = '\n ◍ الـعـضو   ⇠ ['..data.first_name_..'](t.me/'..(data.username_ or 'textchuser')..')'
-status  = '\n ◍ تم ترقيته سون'
+status  = '\n ◍ تم ترقيته اوليانو'
 send(msg.chat_id_, msg.id_, usertext..status)
 end,nil)
 end
 tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, start_function, nil)
 return false
 end
-if text and text:match("^رفع سون@(.*)$") and Sudo(msg) then
-local username = text:match("^رفع سون@(.*)$")
+if text and text:match("^رفع اوليانو@(.*)$") and Sudo(msg) then
+local username = text:match("^رفع اوليانو@(.*)$")
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
@@ -6551,7 +6551,7 @@ return false
 end      
 database:sadd(bot_id..'CoSu'..msg.chat_id_, result.id_)
 usertext = '\n ◍ الـعـضو   ⇠ ['..result.title_..'](t.me/'..(username or 'textchuser')..')'
-status  = '\n ◍ تم ترقيته سون'
+status  = '\n ◍ تم ترقيته اوليانو'
 texts = usertext..status
 else
 texts = ' ◍ لا يوجد حساب بهاذا المعرف'
@@ -6561,8 +6561,8 @@ end
 tdcli_function ({ID = "SearchPublicChat",username_ = username}, start_function, nil)
 return false
 end
-if text and text:match("^رفع سون(%d+)$") and Sudo(msg) then
-local userid = text:match("^رفع سون(%d+)$") 
+if text and text:match("^رفع اوليانو(%d+)$") and Sudo(msg) then
+local userid = text:match("^رفع اوليانو(%d+)$") 
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
@@ -6576,16 +6576,16 @@ database:sadd(bot_id..'CoSu'..msg.chat_id_, userid)
 tdcli_function ({ID = "GetUser",user_id_ = userid},function(arg,data) 
 if data.first_name_ then
 usertext = '\n ◍ الـعـضو   ⇠ ['..data.first_name_..'](t.me/'..(data.username_ or 'textchuser')..')'
-status  = '\n ◍ تم ترقيته سون'
+status  = '\n ◍ تم ترقيته اوليانو'
 send(msg.chat_id_, msg.id_, usertext..status)
 else
 usertext = '\n ◍ الـعـضو   ⇠ '..userid..''
-status  = '\n ◍ تم ترقيته سون'
+status  = '\n ◍ تم ترقيته اوليانو'
 send(msg.chat_id_, msg.id_, usertext..status)
 end;end,nil)
 return false
 end
-if text == ("تنزيل سون") and msg.reply_to_message_id_ and Sudo(msg) then
+if text == ("تنزيل اوليانو") and msg.reply_to_message_id_ and Sudo(msg) then
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
@@ -6599,15 +6599,15 @@ function start_function(extra, result, success)
 database:srem(bot_id..'CoSu'..msg.chat_id_, result.sender_user_id_)
 tdcli_function ({ID = "GetUser",user_id_ = result.sender_user_id_},function(arg,data) 
 usertext = '\n ◍ الـعـضو   ⇠ ['..data.first_name_..'](t.me/'..(data.username_ or 'textchuser')..')'
-status  = '\n ◍ تم تنزيله من سون'
+status  = '\n ◍ تم تنزيله من اوليانو'
 send(msg.chat_id_, msg.id_, usertext..status)
 end,nil)
 end
 tdcli_function ({ID = "GetMessage",chat_id_ = msg.chat_id_,message_id_ = tonumber(msg.reply_to_message_id_)}, start_function, nil)
 return false
 end
-if text and text:match("^تنزيل سون@(.*)$") and Sudo(msg) then
-local username = text:match("^تنزيل سون@(.*)$")
+if text and text:match("^تنزيل اوليانو@(.*)$") and Sudo(msg) then
+local username = text:match("^تنزيل اوليانو@(.*)$")
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
@@ -6621,7 +6621,7 @@ function start_function(extra, result, success)
 if result.id_ then
 database:srem(bot_id..'CoSu'..msg.chat_id_, result.id_)
 usertext = '\n ◍ الـعـضو   ⇠ ['..result.title_..'](t.me/'..(username or 'textchuser')..')'
-status  = '\n ◍ تم تنزيله من سون'
+status  = '\n ◍ تم تنزيله من اوليانو'
 texts = usertext..status
 else
 texts = ' ◍ لا يوجد حساب بهاذا المعرف'
@@ -6631,8 +6631,8 @@ end
 tdcli_function ({ID = "SearchPublicChat",username_ = username}, start_function, nil)
 return false
 end
-if text and text:match("^تنزيل سون(%d+)$") and Sudo(msg) then
-local userid = text:match("^تنزيل سون(%d+)$") 
+if text and text:match("^تنزيل اوليانو(%d+)$") and Sudo(msg) then
+local userid = text:match("^تنزيل اوليانو(%d+)$") 
 if AddChannel(msg.sender_user_id_) == false then
 local textchuser = database:get(bot_id..'text:ch:user')
 if textchuser then
@@ -6646,11 +6646,11 @@ database:srem(bot_id..'CoSu'..msg.chat_id_, userid)
 tdcli_function ({ID = "GetUser",user_id_ = userid},function(arg,data) 
 if data.first_name_ then
 usertext = '\n ◍ الـعـضو   ⇠ ['..data.first_name_..'](t.me/'..(data.username_ or 'textchuser')..')'
-status  = '\n ◍ تم تنزيله من سون'
+status  = '\n ◍ تم تنزيله من اوليانو'
 send(msg.chat_id_, msg.id_, usertext..status)
 else
 usertext = '\n ◍ الـعـضو   ⇠ '..userid..''
-status  = '\n ◍ تم تنزيله من سون'
+status  = '\n ◍ تم تنزيله من اوليانو'
 send(msg.chat_id_, msg.id_, usertext..status)
 end;end,nil)
 return false
@@ -11328,7 +11328,7 @@ local text =
 ' }\n'..' ◍  الايدي  ⇠ { '..idgp..
 ' }\n'..' ◍  الايدي بالصوره  ⇠ { '..idph..
 ' }\n'..' ◍  الرفع  ⇠ { '..setadd..
-' }\n'..' ◍  الحظر  ⇠ { '..banm..' }\n\n ◍⩹━━━━◍『𝑶𝑳𝑰𝑨𝑵𝑶』◍━━━━⩺\n ◍ قناة سورس سون↓ \n'
+' }\n'..' ◍  الحظر  ⇠ { '..banm..' }\n\n ◍⩹━━━━◍『𝑶𝑳𝑰𝑨𝑵𝑶』◍━━━━⩺\n ◍ قناة سورس اوليانو↓ \n'
 send(msg.chat_id_, msg.id_,text)     
 end
 if text ==('تثبيت') and msg.reply_to_message_id_ ~= 0 and Mod(msg) then  
@@ -12413,8 +12413,8 @@ msg_type = 'MSG:NewUser'
 end
 
 
-if text == ""..(database:get(bot_id..'Name:Bot') or 'سون').."" then  
-Namebot = (database:get(bot_id..'Name:Bot') or 'سون')
+if text == ""..(database:get(bot_id..'Name:Bot') or 'اوليانو').."" then  
+Namebot = (database:get(bot_id..'Name:Bot') or 'اوليانو')
 local BANDA_Msg = {
 'ننعم يروحي 😻??',
 'نعم يا قلب  '..Namebot..'',
@@ -12449,7 +12449,7 @@ end
 tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = bot_id, offset_ = 0, limit_ = 1 }, getpro, nil) 
 end
 if text == "بوت" then
-local Namebot = (database:get(bot_id..'Name:Bot') or 'سون') 
+local Namebot = (database:get(bot_id..'Name:Bot') or 'اوليانو') 
 local BANDA_Msg = { 
 'اسمي  '..Namebot..' يا قلبي 🤤💚',
 'اسمي '..Namebot..' يا روحي🙈❤️',
@@ -12598,7 +12598,7 @@ end
 if database:sismember(bot_id.."Sudo:User",result.id_) then
 dev = "المطور ،" else dev = "" end
 if database:sismember(bot_id.."CoSu",result.id_) then
-cu = "سون،" else cu = "" end
+cu = "اوليانو،" else cu = "" end
 if database:sismember(bot_id.."Basic:Constructor"..msg.chat_id_, result.id_) then
 crr = "منشئ اساسي ،" else crr = "" end
 if database:sismember(bot_id..'Constructor'..msg.chat_id_, result.id_) then
@@ -12679,7 +12679,7 @@ end
 if database:sismember(bot_id..'Sudo:User',result.sender_user_id_) then
 dev = 'المطور ،' else dev = '' end
 if database:sismember(bot_id..'CoSu'..msg.chat_id_, result.sender_user_id_) then
-cu = 'سون،' else cu = '' end
+cu = 'اوليانو،' else cu = '' end
 if database:sismember(bot_id..'Basic:Constructor'..msg.chat_id_, result.sender_user_id_) then
 crr = 'منشئ اساسي ،' else crr = '' end
 if database:sismember(bot_id..'Constructor'..msg.chat_id_, result.sender_user_id_) then
@@ -12961,7 +12961,7 @@ if b.username_ then
 User_id = "@"..b.username_
 else
 User_id = msg.sender_user_id_
-end --الكود حصري سورس سونيعني لو بكتهن راح اعرفك انت الاخذتهن
+end --الكود حصري سورس اوليانويعني لو بكتهن راح اعرفك انت الاخذتهن
 local t = "\n ◍المستخدم ~ ["..User_id .."] يصيح المشرفين \n⩹━━━━◍『𝑶𝑳𝑰𝑨𝑵𝑶』◍━━━━⩺\n"
 k = 0
 for i,v in pairs(data.members_) do
@@ -12993,7 +12993,7 @@ end
 
 
 -------------------------------
-if text == ""..(database:get(bot_id..'Name:Bot') or 'سون').." غادر" or text == 'غادر' then  
+if text == ""..(database:get(bot_id..'Name:Bot') or 'اوليانو').." غادر" or text == 'غادر' then  
 if Sudo(msg) and not database:get(bot_id..'Left:Bot'..msg.chat_id_)  then 
 tdcli_function ({ID = "ChangeChatMemberStatus",chat_id_=msg.chat_id_,user_id_=bot_id,status_={ID = "ChatMemberStatusLeft"},},function(e,g) end, nil) 
 send(msg.chat_id_, msg.id_,'※ تم مغادرة المجموعه') 
@@ -15789,7 +15789,7 @@ Msᴀɢ ~ #msgs
 ]],
 [[
 🇪🇬 - 𝄬 username . #username  ??
-🇪🇬 - 𝄬 stast . #stast  𓃠
+🇪🇬 - ?? stast . #stast  𓃠
 🇪🇬 - 𝄬 id . #id 𓃠
 🇪🇬 - 𝄬 gmas . #gmas 𓃠
 🇪🇬 - 𝄬 msgs . #msgs  𓃠
@@ -16445,13 +16445,13 @@ local Text = [[
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '⟦العاب السورس⟧', callback_data="/mute-name"},{text = '⟦مميزات⟧', callback_data="/change-photo"},
+{text = '◗العاب السورس◖', callback_data="/mute-name"},{text = '◗مميزات◖', callback_data="/change-photo"},
 },
 {
-{text = '⟦العاب متطوره⟧', callback_data="/sofi"},
+{text = '◗العاب متطوره◖', callback_data="/sofi"},
 },
 {
-{text = '⟦الاوامر⟧', callback_data="/help12"},
+{text = '◗الاوامر◖', callback_data="/help12"},
 },
 {
 {text = '𝑺𝑶𝑼𝑹𝑪𝑬 𝑶𝑳𝑰𝑨𝑵𝑶', url="t.me/ABCDABCDL"},
@@ -16473,7 +16473,7 @@ keyboard.inline_keyboard = {
 {text = 'اوامر الاعضاء', callback_data="/change-names"},
 },
 {
-{text = '𝑺𝑶𝑼𝑹𝑪𝑬 𝑶𝑳𝑰𝑨𝑵𝑶', url="t.me/ABCDABCDL"},
+{text = '𝑺𝑶??𝑹𝑪𝑬 𝑶𝑳𝑰𝑨𝑵𝑶', url="t.me/ABCDABCDL"},
 },
 }
 local msg_id = msg.id_/2097152/0.5
@@ -17177,7 +17177,7 @@ keyboard.inline_keyboard = {
 {text = 'ااوامر اصحاب الرتب ⇊', callback_data="/help2"},
 },
 {
-{text = '𝑺𝑶𝑼𝑹𝑪𝑬 𝑶𝑳𝑰𝑨𝑵𝑶', url="t.me/ABCDABCDL"},
+{text = '•تــغــير الــلــغــه•', callback_data="/adui74"},
 },
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
@@ -17482,7 +17482,10 @@ There are 5 orders to display 𓆩𓀗𓆪 💕
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = 'Protect Group ◍', callback_data="/help4"},{text = 'entertainment orders ◍', callback_data="/hiddnt"},{text = 'Orders of members ◍', callback_data="/help3"},
+{text = 'Protect Group ◍', callback_data="/help4"},{text = 'entertainment orders ◍', callback_data="/hiddnt"},
+},
+{
+{text = 'Orders of members ◍', callback_data="/help3"},
 },
 {
 {text = 'orders of arrangers ◍', callback_data="/help9"},{text = 'Orders of developers ◍', callback_data="/hle55"},
@@ -17841,13 +17844,13 @@ local Teext =[[
 keyboard = {} 
 keyboard.inline_keyboard = {
 {
-{text = '⟦العاب السورس⟧', callback_data="/mute-name"},{text = '⟦مميزات⟧', callback_data="/change-photo"},
+{text = '◗العاب السورس◖', callback_data="/mute-name"},{text = '◗مميزات◖', callback_data="/change-photo"},
 },
 {
-{text = '⟦العاب متطوره⟧', callback_data="/sofi"},
+{text = '◗العاب متطوره◖', callback_data="/sofi"},
 },
 {
-{text = '⟦الاوامر⟧', callback_data="/help12"},
+{text = '◗الاوامر◖', callback_data="/help12"},
 },
 {
 {text = '𝑺𝑶𝑼𝑹𝑪𝑬 𝑶𝑳𝑰𝑨𝑵𝑶', url="t.me/ABCDABCDL"},
@@ -17892,7 +17895,7 @@ if (text and text == "تفعيل اوامر التسليه") then
 send(msg.chat_id_, msg.id_, ' ◍  تم تفعيل اوامر التسليه')
 database:del(bot_id.."Fun_Bots:"..msg.chat_id_)
 end
-local Name_Bot = (database:get(bot_id..'Name:Bot') or 'سون')
+local Name_Bot = (database:get(bot_id..'Name:Bot') or 'اوليانو')
 if not database:get(bot_id.."Fun_Bots:"..msg.chat_id_) then
 if text ==  ""..Name_Bot..' شنو رئيك بهاذا' and tonumber(msg.reply_to_message_id_) > 0 then     
 function FunBot(extra, result, success) 
