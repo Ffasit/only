@@ -13202,7 +13202,7 @@ else
 username = 'SOURCEVENOM'
 end
 local msg_id = msg.id_/2097152/0.5  
-local textt = ' ◍ انت  ⤌ '..Rutba(msg.sender_user_id_,msg.chat_id_) روح قلبي 🐼💜
+local textt = ' ❤️ انت يا قلبي  '..Rutba(msg.sender_user_id_,msg.chat_id_) 
 local Banda = 'https://t.me/Qtdao/71'
 keyboard = {} 
 keyboard.inline_keyboard = {
