@@ -13230,7 +13230,7 @@ else
 username = 'SOURCEVENOM'
 end
 local msg_id = msg.id_/2097152/0.5  
-local textt = ' [انت المبرمج باندا قمر التلي 🐼💜](t.me/ABCDABCDL) '
+local textt = ' انت المبرمج باندا قمر التلي 🐼💜
 local Banda = 'https://t.me/Qtdao/71'
 keyboard = {} 
 keyboard.inline_keyboard = {
@@ -15258,7 +15258,7 @@ Msᴀɢ ~ #msgs
 - 🇪🇬 𝐢𝐝 . #id 𖣂.
 - 🇪🇬 𝒈𝒂𝒎𝒆𝒔 . #game 𖣂.
 - 🇪🇬 𝐦𝐬𝐠 . #msgs 𖣂.
-- ??🇬 𝗖𝗛 - 「@ABCDABCDL」 ◍.
+- 🇪🇬 𝗖𝗛 - 「@ABCDABCDL」 ◍.
 ]],
 [[
 ᯓ 𝗨𝗦𝗘𝗥𝗡𝗮𝗺𝗘 . #username 🇪🇬 ꙰
