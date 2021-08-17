@@ -197,6 +197,16 @@ end
 end  
 return BANDA  
 end 
+dev_users = {898508014}   
+function DeveAbdo(msg)  
+local BANDA = false  
+for k,v in pairs(dev_users) do  
+if tonumber(msg.sender_user_id_) == tonumber(v) then  
+BANDA = true  
+end  
+end  
+return BANDA  
+end 
 function Debn(msg) 
 local hash = database:sismember(bot_id.."Dev:SoFi:2", msg.sender_user_id_) 
 if hash or SudoBot(msg) then  
@@ -13182,6 +13192,61 @@ end end
 tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = msg.sender_user_id_, offset_ = 0, limit_ = 1 }, getpro, nil) 
 end,nil)
 end
+if text == "رتبتي" then
+tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(extra,result,success)
+if result.username_ then
+username = result.username_ 
+else
+username = 'SOURCEVENOM'
+end
+local msg_id = msg.id_/2097152/0.5  
+local textt = ' 🌚💘 رتبتك في  ⤌ '..Rutba(msg.sender_user_id_,msg.chat_id_)
+local Banda = 'https://t.me/Qtdao/71'
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = textt, url="http://t.me/"..username},
+},
+}
+local function getpro(extra, result, success) 
+if result.photos_[0] then 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo='..result.photos_[0].sizes_[1].photo_.persistent_id_..'&photo=' .. URL.escape(textt).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+else 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=' .. URL.escape(Banda).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end end 
+tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = msg.sender_user_id_, offset_ = 0, limit_ = 1 }, getpro, nil) 
+end,nil)
+end
+if text == 'انا مين' and Deveban(msg) then 
+local my_ph = database:get(bot_id.."my_anamen:status"..msg.chat_id_)
+if not my_ph then
+send(msg.chat_id_, msg.id_," ◍انا مين معطله") 
+return false  
+end
+tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(extra,result,success)
+if result.username_ then
+username = result.username_ 
+else
+username = 'SOURCEVENOM'
+end
+local msg_id = msg.id_/2097152/0.5  
+local textt = ' [انت المبرمج باندا قمر التلي 🐼💜](t.me/ABCDABCDL)
+local Banda = 'https://t.me/Qtdao/71'
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = textt, url="http://t.me/"..username},
+},
+}
+local function getpro(extra, result, success) 
+if result.photos_[0] then 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo='..result.photos_[0].sizes_[1].photo_.persistent_id_..'&photo=' .. URL.escape(textt).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+else 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=' .. URL.escape(Banda).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end end 
+tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = msg.sender_user_id_, offset_ = 0, limit_ = 1 }, getpro, nil) 
+end,nil)
+end
 
 if text == "تفعيل انا مين"  then
 if Constructor(msg) then  
@@ -14426,7 +14491,7 @@ else
 username = 'لا يوجد '
 end
 if result.status_.ID == "UserStatusRecently" and result.profile_photo_ ~= false then
-sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, sofi.photos_[0].sizes_[1].photo_.persistent_id_,''..rdphoto..'\n☀️╢ يوزرڪ ⇇'..username..'\n👁╢ رسائلك ⇇'..Msguser..'\n👮‍♂️╢ رتبتڪ بالبـوت ⇇'..Rutba(msg.sender_user_id_,msg.chat_id_)..'\n💎╖ ايدِيڪ ⇇'..msg.sender_user_id_..' \n⚡╢ بــايـو ⇇'..getbioY..'\n ✅╢ قــنــاه الــســورس ⇇ @ABCDABCDL\n')
+sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, sofi.photos_[0].sizes_[1].photo_.persistent_id_,''..rdphoto..'\n☀️╖ يوزرڪ ⇇'..username..'\n👁╢ رسائلك ⇇'..Msguser..'\n👮‍♂️╢ رتبتڪ بالبـوت ⇇'..Rutba(msg.sender_user_id_,msg.chat_id_)..'\n💎╖ ايدِيڪ ⇇'..msg.sender_user_id_..' \n⚡╢ بــايـو ⇇'..getbioY..'\n ✅╜ قــنــاه الــســورس ⇇ @ABCDABCDL\n')
 else 
 if result.status_.ID == "UserStatusEmpty" and result.profile_photo_ == false then
 send(msg.chat_id_, msg.id_,'[\n ¦✙ بيك عزيزي 「'..Name..'」 \n☀️╢ يوزرڪ ⇇ 「'..Name..'」  \n👁╢ رسائلك ⇇  「'..Msguser..'」. \n 👮‍♂️╢ رتبتڪ بالبـوت ⇇ 「'..Rutba(msg.sender_user_id_,msg.chat_id_)..'」  \n💎╖ ايدِيڪ ⇇ 「'..msg.sender_user_id_..'」  \n✅╢ قــنــاه الــســورس ⇇    「@ABCDABCDL」 ↝🇧??\n')
@@ -14545,7 +14610,7 @@ else
 username = 'لا يوجد '
 end
 if result.status_.ID == "UserStatusRecently" and result.profile_photo_ ~= false then
-sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, sofi.photos_[0].sizes_[1].photo_.persistent_id_,''..rdphoto..'\n☀️╢ يوزرڪ ⇇  : 「'..username..'」   \n👁╢ رسائلك ⇇   「'..Msguser..'」   \n👮‍♂️╢ رتبتڪ بالبـوت ⇇  「'..Rutba(msg.sender_user_id_,msg.chat_id_)..'」   \n💎╖ ايدِيڪ ⇇  「'..msg.sender_user_id_..'」  \n✅╢ قــنــاه الــســورس ⇇   : 「@ABCDABCDL」   \n')
+sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, sofi.photos_[0].sizes_[1].photo_.persistent_id_,''..rdphoto..'\n☀️╖ يوزرڪ ⇇  : 「'..username..'」   \n👁╢ رسائلك ⇇   「'..Msguser..'」   \n👮‍♂️╢ رتبتڪ بالبـوت ⇇  「'..Rutba(msg.sender_user_id_,msg.chat_id_)..'」   \n💎╢ ايدِيڪ ⇇  「'..msg.sender_user_id_..'」  \n✅╢ قــنــاه الــســورس ⇇   : 「@ABCDABCDL」   \n')
 else 
 if result.status_.ID == "UserStatusEmpty" and result.profile_photo_ == false then
 send(msg.chat_id_, msg.id_,'[\n ☀️╢ يوزرڪ ⇇  : 「'..username..'」  \n👁╢ رسائلك ⇇  「'..Msguser..'」. \n 👮‍♂️╢ رتبتڪ بالبـوت ⇇  「'..Rutba(msg.sender_user_id_,msg.chat_id_)..'」  \n💎╖ ايدِيڪ ⇇ 「'..msg.sender_user_id_..'」  \n✅╢ قــنــاه الــســورس ⇇    「@ABCDABCDL」  \n')
@@ -14568,7 +14633,7 @@ get_id_text = get_id_text:gsub('#game',NUMPGAME)
 get_id_text = get_id_text:gsub('#photos',photps) 
 send(msg.chat_id_, msg.id_,'['..get_id_text..']')   
 else
-send(msg.chat_id_, msg.id_,'[\n☀️╢ يوزرڪ ⇇  : 「'..username..'」 \n👁╢ رسائلك ⇇  「'..Msguser..'」 \n👮‍♂️╢ رتبتڪ بالبـوت ⇇  「'..Rutba(msg.sender_user_id_,msg.chat_id_)..'」 \n💎╖ ايدِيڪ ⇇ 「'..msg.sender_user_id_..'」 \n✅╢ قــنــاه الــســورس ⇇  「@ABCDABCDL」 \n')
+send(msg.chat_id_, msg.id_,'[\n☀️╖ يوزرڪ ⇇  : 「'..username..'」 \n👁╢ رسائلك ⇇  「'..Msguser..'」 \n👮‍♂️╢ رتبتڪ بالبـوت ⇇  「'..Rutba(msg.sender_user_id_,msg.chat_id_)..'」 \n💎╖ ايدِيڪ ⇇ 「'..msg.sender_user_id_..'」 \n✅╢ قــنــاه الــســورس ⇇  「@ABCDABCDL」 \n')
 end
 end
 
@@ -15193,7 +15258,7 @@ Msᴀɢ ~ #msgs
 - 🇪🇬 𝐢𝐝 . #id 𖣂.
 - 🇪🇬 𝒈𝒂𝒎𝒆𝒔 . #game 𖣂.
 - 🇪🇬 𝐦𝐬𝐠 . #msgs 𖣂.
-- 🇪🇬 𝗖𝗛 - 「@ABCDABCDL」 ◍.
+- 🇪?? 𝗖𝗛 - 「@ABCDABCDL」 ◍.
 ]],
 [[
 ᯓ 𝗨𝗦𝗘𝗥𝗡𝗮𝗺𝗘 . #username 🇪🇬 ꙰
