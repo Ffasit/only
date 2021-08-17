@@ -3806,23 +3806,13 @@ keyboard.inline_keyboard = {
 local msg_id = msg.id_/2097152/0.5 
 https.request("https://api.telegram.org/bot"..token..'/sendvideo?chat_id=' .. msg.chat_id_ .. '&video=https://t.me/Qapplu/'..ght..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
-if text == 'تفعيل اليوتيوب' and Constructor(msg) then  
-database:del(bot_id..'searchinbot'..msg.chat_id_) 
-send(msg.chat_id_, msg.id_,'◍ تم تفعيل اليوتيوب*') 
-return false  
-end
-if text == 'تعطيل اليوتيوب' and Constructor(msg) then  
-database:set(bot_id..'searchinbot'..msg.chat_id_,true) 
-send(msg.chat_id_, msg.id_,'◍ تم تعطيل اليوتيوب*') 
-return false  
-end
-if not database:get(bot_id..'searchinbot'..msg.chat_id_) then
+
 if text and text:match('^بحث (.*)$') then 
-local TextSearch = text:match('^بحث (.*)$') 
-local msg_id = msg.id_/2097152/0.5
-local done = json:decode(https.request("https://boyka-api.ml/Do/searchinbot.php?token="..token.."&chat_id="..msg.chat_id_.."&from="..msg.sender_user_id_.."&msg="..msg_id.."&Text="..TextSearch.."&n=s")) 
+local search = text:match('^بحث (.*)$') 
+local msgin = msg.id_/2097152/0.5 
+http.request('http://78.141.220.60/Yahya.php?token='..token..'&chat_id='..msg.chat_id_..'&Text='..URL.escape(search)..'&msg='..msgin)
 end
-end
+
 if text == "تويت" or text == "كت تويت" then 
 local TWEET_Msg = { 
 "مرتبط؟ ", 
@@ -15351,7 +15341,7 @@ Msᴀɢ ~ #msgs
 𓁷 - 𝗖𝗛 - 「@ABCDABCDL」 ◍
 ]],
 [[
-𖡋 𝐔𝐒𝐄 #username 
+?? 𝐔𝐒𝐄 #username 
 𖡋 𝐌𝐒𝐆 #msgs 
 𖡋 𝐒𝐓𝐀 #stast 
 𖡋 𝐈𝐃 #id 
@@ -16834,41 +16824,6 @@ local Chat_id = data.chat_id_
 local Msg_id = data.message_id_
 local msg_idd = Msg_id/2097152/0.5
 local Text = data.payload_.data_
-if Text and Text:match("^(%d+):searchVid(.*)$") then
-id_from_user  = Text:match("(%d+)")  
-local OnVid = Text:gsub(':searchVid',''):gsub(id_from_user,'')
-msgidrp  = OnVid:match("(%d+)")
-local id_from_vid = Text:gsub(':',''):gsub('searchVid',''):gsub(id_from_user,''):gsub(msgidrp,'')
-if tonumber(data.sender_user_id_) ~= tonumber(id_from_user) then  
-local notText = '◍ عذرا الاوامر هذه لا تخصك'
-https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
-return false
-end
-object = https.request('https://black-source.tk/Api/InfoVid.php?url=http://www.youtube.com/watch?v='..URL.escape(id_from_vid))
-objectend = JSON.decode(object)
-infovid = "◍ اختر صيغه التنزيل الان.\n"
-keyboard = {} 
-keyboard.inline_keyboard = {
-{{text = 'Mp4', callback_data=id_from_user..":DownloadVid:"..msgidrp..":"..id_from_vid..":Mp4"},{text = 'mp3', callback_data=id_from_user..":DownloadVid:"..msgidrp..":"..id_from_vid..":mp3"},{text = 'ogg', callback_data=id_from_user..":DownloadVid:"..msgidrp..":"..id_from_vid..":ogg"}},
-{{text = '𝑺𝑶𝑼𝑹𝑪𝑬 𝑶𝑳𝑰𝑨𝑵𝑶', url="t.me/ABCDABCDL"}},
-}
-https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(infovid)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
-InfoVid = https.request('https://black-source.tk/Api/BotYoutube.php?Id='..URL.escape(id_from_vid))
-InfoVidend = JSON.decode(InfoVid)
-if InfoVidend.Info.video == "not" then  
-https.request("https://boyka-api.ml/Do/searchinbot.php?V="..URL.escape(id_from_vid).."&ch=do")
-end
-end
-if Text and Text:match("^(%d+):DownloadVid(.*)$") then
-local notId  = Text:match("(%d+)")  
-if tonumber(data.sender_user_id_) ~= tonumber(notId) then  
-local notText = '◍ عذرا الاوامر هذه لا تخصك'
-https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
-return false
-end
-https.request("https://api.telegram.org/bot"..token.."/deleteMessage?chat_id="..Chat_id.."&message_id="..msg_idd)
-https.request("https://boyka-api.ml/Do/searchinbot.php?token="..token.."&chat_id="..Chat_id.."&data="..URL.escape(Text).."&n=do")
-end
 if Text == '/help1' then
 if not Mod(data) then
 local notText = '✘ عذرا الاوامر هذه لا تخصك'
@@ -17904,6 +17859,48 @@ keyboard.inline_keyboard = {
 }
 return https.request("https://api.telegram.org/bot"..token..'/editMessageText?chat_id='..Chat_id..'&text='..URL.escape(Teext)..'&message_id='..msg_idd..'&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
 end
+if Text and Text:match('(%d+)/UnKed@(%d+):(%d+)') then
+local ramsesadd = {string.match(Text,"^(%d+)/UnKed@(%d+):(%d+)$")}
+if tonumber(ramsesadd[2]) == tonumber(ramsesadd[3]) then
+if tonumber(ramsesadd[1]) == tonumber(data.sender_user_id_) then
+DeleteMessage(data.chat_id_, {[0] = Msg_id}) 
+https.request("https://api.telegram.org/bot" .. token .. "/restrictChatMember?chat_id=" .. data.chat_id_ .. "&user_id=" .. data.sender_user_id_ .. "&can_send_messages=True&can_send_media_messages=True&can_send_other_messages=True&can_add_web_page_previews=True")
+end
+end
+end
+vardump(data)
+if Text and Text:match('@id/(.*)') then
+local Id_Link = Text:match('@id/(.*)') 
+tdcli_function ({ID = "GetUser",user_id_ = bot_id,},function(arg,data) 
+DeleteMessage(Chat_id,{[0] = Msg_id})  
+local textt = '- من فضلك اختر نوع التنزيل'
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = 'تنزيل صوت', callback_data="mp3/"..Id_Link},
+},
+{
+{text = 'تنزيل بصمه', callback_data="ogg/"..Id_Link},
+},
+{
+{text = 'تنزيل فيديو', callback_data="mp4/"..Id_Link},
+},
+}
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id='..Chat_id..'&photo='..'https://youtu.be/'..Id_Link..'&reply_to_message_id=0&parse_mode=markdown&disable_web_page_preview=true&reply_markup='..JSON.encode(keyboard)) 
+end,nil)
+elseif Text and Text:match('mp3/(.*)') then
+local Id_Link = Text:match('mp3/(.*)') 
+DeleteMessage(Chat_id,{[0] = Msg_id})    
+http.request('http://78.141.220.60/Pascar.php?url='..Id_Link..'&token='..token..'&chat='..data.chat_id_..'&type=mp3&msg=0')
+elseif Text and Text:match('ogg/(.*)') then
+local Id_Link = Text:match('ogg/(.*)') 
+DeleteMessage(Chat_id,{[0] = Msg_id})    
+http.request('http://78.141.220.60/Pascar.php?url='..Id_Link..'&token='..token..'&chat='..data.chat_id_..'&type=ogg&msg=0')
+elseif Text and Text:match('mp4/(.*)') then
+local Id_Link = Text:match('mp4/(.*)') 
+DeleteMessage(Chat_id,{[0] = Msg_id})    
+http.request('http://78.141.220.60/Pascar.php?url='..Id_Link..'&token='..token..'&chat='..data.chat_id_..'&type=mp4&msg=0')
+end      
 end
 if data.ID == "UpdateNewMessage" then  -- new msg
 msg = data.message_
