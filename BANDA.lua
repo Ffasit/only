@@ -4747,18 +4747,8 @@ end
 end
 
 
-if text == "غنيلي" and not  database:get(bot_id.."sing:for:me"..msg.chat_id_) then 
-ght = math.random(3,200); 
-local Text ='تم اختيار المقطع الصوتي لك' 
-keyboard = {}  
-keyboard.inline_keyboard = { 
-{{text = 'اضف البوت الي مجموعتك' ,url="t.me/"..dofile("./kkkklInfo.lua").botUserName.."?startgroup=start"}}, 
-} 
-local msg_id = msg.id_/2097152/0.5 
-https.request("https://api.telegram.org/bot"..token..'/sendVoice?chat_id=' .. msg.chat_id_ .. '&voice=https://t.me/Ccckkc/'..ght..'&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
-end
-end
-if text == '770@#_&' then 
+
+if text == 'غنيلي' then 
 Num = math.random(8,83)
 Mhm = math.random(108,143)
 Mhhm = math.random(166,179)
@@ -14430,10 +14420,10 @@ else
 username = 'لا يوجد '
 end
 if result.status_.ID == "UserStatusRecently" and result.profile_photo_ ~= false then
-sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, sofi.photos_[0].sizes_[1].photo_.persistent_id_,''..rdphoto..'\n☀️╢ يوزرڪ ⇇  : 「'..username..'」\n👁╢ رسائلك ⇇   「'..Msguser..'」\n👮‍♂️╢ رتبتڪ بالبـوت ⇇   「'..Rutba(msg.sender_user_id_,msg.chat_id_)..'」\n💎╖ ايدِيڪ ⇇  「'..msg.sender_user_id_..'」 \n⚡╢ بــايـو ⇇   「'..getbioY..'」 \n ✅╢ قــنــاه الــســورس ⇇   「@ABCDABCDL」 \n')
+sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, sofi.photos_[0].sizes_[1].photo_.persistent_id_,''..rdphoto..'\n☀️╢ يوزرڪ ⇇'..username..'\n👁╢ رسائلك ⇇'..Msguser..'\n👮‍♂️╢ رتبتڪ بالبـوت ⇇'..Rutba(msg.sender_user_id_,msg.chat_id_)..'\n💎╖ ايدِيڪ ⇇'..msg.sender_user_id_..' \n⚡╢ بــايـو ⇇'..getbioY..'\n ✅╢ قــنــاه الــســورس ⇇ @ABCDABCDL\n')
 else 
 if result.status_.ID == "UserStatusEmpty" and result.profile_photo_ == false then
-send(msg.chat_id_, msg.id_,'[\n ¦✙ بيك عزيزي 「'..Name..'」 \n☀️╢ يوزرڪ ⇇ 「'..Name.. '」  \n👁╢ رسائلك ⇇  「'..Msguser..'」. \n 👮‍♂️╢ رتبتڪ بالبـوت ⇇  「'..Rutba(msg.sender_user_id_,msg.chat_id_)..'」  \n💎╖ ايدِيڪ ⇇ 「'..msg.sender_user_id_..'」  \n✅╢ قــنــاه الــســورس ⇇    「@ABCDABCDL」 ↝🇧??\n')
+send(msg.chat_id_, msg.id_,'[\n ¦✙ بيك عزيزي 「'..Name..'」 \n☀️╢ يوزرڪ ⇇ 「'..Name..'」  \n👁╢ رسائلك ⇇  「'..Msguser..'」. \n 👮‍♂️╢ رتبتڪ بالبـوت ⇇ 「'..Rutba(msg.sender_user_id_,msg.chat_id_)..'」  \n💎╖ ايدِيڪ ⇇ 「'..msg.sender_user_id_..'」  \n✅╢ قــنــاه الــســورس ⇇    「@ABCDABCDL」 ↝🇧??\n')
 else
 send(msg.chat_id_, msg.id_, '\n ◍ الصوره ⇜ ليس لديك صور في حسابك'..'[\n☀️╢ يوزرڪ ⇇  :「'..username..'」\n👁╢ رسائلك ⇇  「'..Msguser..'」\n💎╖ ايدِيڪ ⇇ 「'..msg.sender_user_id_..'」\n✅╢ قــنــاه الــســورس ⇇   「@ABCDABCDL」\n')
 end 
@@ -14581,7 +14571,7 @@ end,nil)
 end,nil)
 end,nil)
 end
-end
+end 
 if text == 'تغير الايدي' and Manager(msg) then 
 local List = {
 [[
