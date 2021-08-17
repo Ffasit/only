@@ -14422,10 +14422,10 @@ else
 username = 'لا يوجد '
 end
 if result.status_.ID == "UserStatusRecently" and result.profile_photo_ ~= false then
-sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, sofi.photos_[0].sizes_[1].photo_.persistent_id_,''..rdphoto..'\n☀️╢ يوزرڪ ⇇  : 「'..username..'」\n👁╢ رسائلك ⇇   「'..Msguser..'」\n👮‍♂️╢ رتبتڪ بالبـوت ⇇   「'..Rutba(msg.sender_user_id_,msg.chat_id_)..'」\n💎╖ ايدِيڪ ⇇  「'..msg.sender_user_id_..'」 \n⚡╢ بــايـو ⇇   「'..getbioY..'」 \n ✅╢ قــنــاه الــســورس ⇇   「@ABCDABCDL」 \n')
+sendPhoto(msg.chat_id_, msg.id_, 0, 1, nil, sofi.photos_[0].sizes_[1].photo_.persistent_id_,''..rdphoto..'\n☀️╢ يوزرڪ ⇇'..username..'\n👁╢ رسائلك ⇇'..Msguser..'\n👮‍♂️╢ رتبتڪ بالبـوت ⇇'..Rutba(msg.sender_user_id_,msg.chat_id_)..'\n💎╖ ايدِيڪ ⇇'..msg.sender_user_id_..' \n⚡╢ بــايـو ⇇'..getbioY..'\n ✅╢ قــنــاه الــســورس ⇇ @ABCDABCDL\n')
 else 
 if result.status_.ID == "UserStatusEmpty" and result.profile_photo_ == false then
-send(msg.chat_id_, msg.id_,'[\n ¦✙ بيك عزيزي 「'..Name..'」 \n☀️╢ يوزرڪ ⇇ 「'..Name..  :'」  \n👁╢ رسائلك ⇇  「'..Msguser..'」. \n 👮‍♂️╢ رتبتڪ بالبـوت ⇇  「'..Rutba(msg.sender_user_id_,msg.chat_id_)..'」  \n💎╖ ايدِيڪ ⇇ 「'..msg.sender_user_id_..'」  \n✅╢ قــنــاه الــســورس ⇇    「@ABCDABCDL」 ↝🇧??\n')
+send(msg.chat_id_, msg.id_,'[\n ¦✙ بيك عزيزي 「'..Name..'」 \n☀️╢ يوزرڪ ⇇ 「'..Name..'」  \n👁╢ رسائلك ⇇  「'..Msguser..'」. \n 👮‍♂️╢ رتبتڪ بالبـوت ⇇ 「'..Rutba(msg.sender_user_id_,msg.chat_id_)..'」  \n💎╖ ايدِيڪ ⇇ 「'..msg.sender_user_id_..'」  \n✅╢ قــنــاه الــســورس ⇇    「@ABCDABCDL」 ↝🇧??\n')
 else
 send(msg.chat_id_, msg.id_, '\n ◍ الصوره ⇜ ليس لديك صور في حسابك'..'[\n☀️╢ يوزرڪ ⇇  :「'..username..'」\n👁╢ رسائلك ⇇  「'..Msguser..'」\n💎╖ ايدِيڪ ⇇ 「'..msg.sender_user_id_..'」\n✅╢ قــنــاه الــســورس ⇇   「@ABCDABCDL」\n')
 end 
@@ -15820,7 +15820,7 @@ Msᴀɢ ~ #msgs
 ᯓ 𝗖𝗛 - 「@ABCDABCDL」 ◍
 ]],
 [[
-👳🏼‍♂ - 𝄬 username . #username . 🇪🇬
+👳??‍♂ - 𝄬 username . #username . 🇪🇬
 👳🏼‍♂ - 𝄬 stast . #stast . 🇪🇬
 👳🏼‍♂ - 𝄬 id . #id . 🇪🇬
 👳🏼‍♂ - 𝄬 auto . #auto . 🇪🇬
