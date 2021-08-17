@@ -3727,7 +3727,7 @@ local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/Qtdao/68&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
 end
 
-if text == 'عبدو' or text == 'عبدو خيرت' or text == 'abdo' then
+if text == 'عبدو' or text == 'عبدو خيري' or text == 'abdo' then
 local Text = [[
  مبرمج السورس لو حابب تتواصل معاه
 اتبع الزر إلى تحت ↓
@@ -3735,6 +3735,7 @@ local Text = [[
 keyboard = {} 
 keyboard.inline_keyboard = {
 {{text = '➸𝑨➸𝑶➸𝑨𝑩𝑫𝑶 𝑲𝑯𝑨𝑰𝑹𝒀⋮🇹🇷𖤐!',url="t.me/Aashekelsafar"}},
+{{text = '𝑇𝑊𝑆𝑂𝐿', url="t.me/oliano_source_bot"}},
 }
 local msg_id = msg.id_/2097152/0.5
 https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=https://t.me/Aashekelsafar&caption=' .. URL.escape(Text).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard))
@@ -11289,7 +11290,7 @@ local text =
 ' }\n'..' ◍  الدردشه  ⇠ { '..lock_text..
 ' }\n'..' ◍   الفيديو  ⇠ { '..lock_ved..
 ' }\n'..' ◍   الصور  ⇠ { '..lock_photo..
-' }\nء⩹━━━━◍『𝑶𝑳𝑰𝑨𝑵𝑶』◍━━━━⩺'..
+' }\nء⩹━━━━◍『𝑶??𝑰𝑨𝑵𝑶』◍━━━━⩺'..
 '\n'..' ◍   الصوت  ⇠ { '..lock_muse..
 ' }\n'..' ◍  الملصقات  ⇠ { '..lock_ste..
 ' }\n'..' ◍  الجهات  ⇠ { '..lock_phon..
@@ -13167,87 +13168,60 @@ tdcli_function ({ID = "SearchPublicChat",username_ = username}, start_function, 
 end
 
 
-if text == "رتبتي" then
-tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(extra,result,success)
-if result.username_ then
-username = result.username_ 
-else
-username = 'SOURCEVENOM'
-end
-local msg_id = msg.id_/2097152/0.5  
-local textt = ' 🌚💘 رتبتك في  ⤌ '..Rutba(msg.sender_user_id_,msg.chat_id_)
-local Banda = 'https://t.me/Qtdao/71'
-keyboard = {} 
-keyboard.inline_keyboard = {
-{
-{text = textt, url="http://t.me/"..username},
-},
-}
-local function getpro(extra, result, success) 
-if result.photos_[0] then 
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo='..result.photos_[0].sizes_[1].photo_.persistent_id_..'&photo=' .. URL.escape(textt).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
-else 
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=' .. URL.escape(Banda).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
-end end 
-tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = msg.sender_user_id_, offset_ = 0, limit_ = 1 }, getpro, nil) 
-end,nil)
-end
-if text == "رتبتي" then
-tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(extra,result,success)
-if result.username_ then
-username = result.username_ 
-else
-username = 'SOURCEVENOM'
-end
-local msg_id = msg.id_/2097152/0.5  
-local textt = ' 🌚💘 رتبتك في  ⤌ '..Rutba(msg.sender_user_id_,msg.chat_id_)
-local Banda = 'https://t.me/Qtdao/71'
-keyboard = {} 
-keyboard.inline_keyboard = {
-{
-{text = textt, url="http://t.me/"..username},
-},
-}
-local function getpro(extra, result, success) 
-if result.photos_[0] then 
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo='..result.photos_[0].sizes_[1].photo_.persistent_id_..'&photo=' .. URL.escape(textt).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
-else 
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=' .. URL.escape(Banda).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
-end end 
-tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = msg.sender_user_id_, offset_ = 0, limit_ = 1 }, getpro, nil) 
-end,nil)
-end
-if text == 'llllkk' and Deveban(msg) then 
-local my_ph = database:get(bot_id.."my_anamen:status"..msg.chat_id_)
-if not my_ph then
-send(msg.chat_id_, msg.id_," ◍انا مين معطله") 
-return false  
-end
-tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(extra,result,success)
-if result.username_ then
-username = result.username_ 
-else
-username = 'SOURCEVENOM'
-end
-local msg_id = msg.id_/2097152/0.5  
-local textt = ' انت المبرمج باندا قمر التلي 🐼💜 '
-local Banda = 'https://t.me/Qtdao/71'
-keyboard = {} 
-keyboard.inline_keyboard = {
-{
-{text = textt, url="http://t.me/"..username},
-},
-}
-local function getpro(extra, result, success) 
-if result.photos_[0] then 
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo='..result.photos_[0].sizes_[1].photo_.persistent_id_..'&photo=' .. URL.escape(textt).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
-else 
-https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=' .. URL.escape(Banda).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
-end end 
-tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = msg.sender_user_id_, offset_ = 0, limit_ = 1 }, getpro, nil) 
-end,nil)
-end
 
+if text == "رتبتي" then
+tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(extra,result,success)
+if result.username_ then
+username = result.username_ 
+else
+username = 'SOURCEVENOM'
+end
+local msg_id = msg.id_/2097152/0.5  
+local textt = ' 🌚❤️ رتبتك في البوت⤌ '..Rutba(msg.sender_user_id_,msg.chat_id_)
+local Banda = 'https://t.me/Qtdao/71'
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = textt, url="http://t.me/"..username},
+},
+}
+local function getpro(extra, result, success) 
+if result.photos_[0] then 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo='..result.photos_[0].sizes_[1].photo_.persistent_id_..'&photo=' .. URL.escape(textt).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+else 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=' .. URL.escape(Banda).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end end 
+tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = msg.sender_user_id_, offset_ = 0, limit_ = 1 }, getpro, nil) 
+end,nil)
+end
+if text == "انا مين" then
+tdcli_function ({ID = "GetUser",user_id_ = msg.sender_user_id_},function(extra,result,success)
+if result.username_ then
+username = result.username_ 
+else
+username = 'SOURCEVENOM'
+end
+local msg_id = msg.id_/2097152/0.5  
+local textt = ' ◍ انت  ⤌ '..Rutba(msg.sender_user_id_,msg.chat_id_) روح قلبي 🐼💜
+local Banda = 'https://t.me/Qtdao/71'
+keyboard = {} 
+keyboard.inline_keyboard = {
+{
+{text = textt, url="http://t.me/"..username},
+},
+{
+{text = 'اضف البوت الي مجموعتك' ,url="t.me/"..dofile("./Banda.lua").botUserName.."?startgroup=start"},
+},
+}
+local function getpro(extra, result, success) 
+if result.photos_[0] then 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo='..result.photos_[0].sizes_[1].photo_.persistent_id_..'&photo=' .. URL.escape(textt).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+else 
+https.request("https://api.telegram.org/bot"..token..'/sendPhoto?chat_id=' .. msg.chat_id_ .. '&photo=' .. URL.escape(Banda).."&reply_to_message_id="..msg_id.."&parse_mode=markdown&disable_web_page_preview=true&reply_markup="..JSON.encode(keyboard)) 
+end end 
+tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = msg.sender_user_id_, offset_ = 0, limit_ = 1 }, getpro, nil) 
+end,nil)
+end
 if text == "تفعيل انا مين"  then
 if Constructor(msg) then  
 database:set(bot_id.."my_anamen:status"..msg.chat_id_,true) 
@@ -13261,105 +13235,6 @@ if Constructor(msg) then
 database:del(bot_id.."my_anamen:status"..msg.chat_id_) 
 send(msg.chat_id_, msg.id_," ◍ تـم تـعـطـيل انا مين") 
 return false end
-end
-if text == 'انا مين' and SudoBot(msg) then 
-local my_ph = database:get(bot_id.."my_anamen:status"..msg.chat_id_)
-if not my_ph then
-send(msg.chat_id_, msg.id_," ◍انا مين معطله") 
-return false  
-end
-send(msg.chat_id_,msg.id_, '[نت مطوري تاج راسي 😊](t.me/ABCDABCDL)')
-return false
-end
-
-if text == 'انا مين' and Debn(msg) then 
-local my_ph = database:get(bot_id.."my_anamen:status"..msg.chat_id_)
-if not my_ph then
-send(msg.chat_id_, msg.id_," ◍انا مين معطله") 
-return false  
-end
-send(msg.chat_id_,msg.id_, '[انت مطوري الثاني حته مني 😍💚](t.me/ABCDABCDL)')
-return false
-end
-
-if text == 'انا مين' and Sudo(msg) then 
-local my_ph = database:get(bot_id.."my_anamen:status"..msg.chat_id_)
-if not my_ph then
-send(msg.chat_id_, msg.id_," ◍انا مين معطله") 
-return false  
-end
-send(msg.chat_id_,msg.id_, '[انت المطور بس الصغنن 🌝💘](t.me/ABCDABCDL)')
-return false
-end
-
-if text == 'انا مين' and CoSu(msg) then 
-local my_ph = database:get(bot_id.."my_anamen:status"..msg.chat_id_)
-if not my_ph then
-send(msg.chat_id_, msg.id_," ◍انا مين معطله") 
-return false  
-end
-send(msg.chat_id_,msg.id_, '[نت المالك هن يعني حاجه فوق فوف راسي 😂♥](t.me/ABCDABCDL)')
-return false
-end
-
-if text == 'انا مين' and Constructor(msg) then 
-local my_ph = database:get(bot_id.."my_anamen:status"..msg.chat_id_)
-if not my_ph then
-send(msg.chat_id_, msg.id_," ◍انا مين معطله") 
-return false  
-end
-send(msg.chat_id_,msg.id_, '[انت منشئ يسطا عتلاء منشئ عاوز حاجه تانيه😹🤦‍♂️](t.me/ABCDABCDL)')
-return false
-end
-
-if text == 'انا مين' and BasicConstructor(msg) then 
-local my_ph = database:get(bot_id.."my_anamen:status"..msg.chat_id_)
-if not my_ph then
-send(msg.chat_id_, msg.id_," ◍انا مين معطله") 
-return false  
-end
-send(msg.chat_id_,msg.id_, '[ انت هنا منشئ اساسي يعني اعلى رتبه عاوزك تفتخر😂🎯](t.me/ABCDABCDL)')
-return false
-end
-
-if text == 'انا مين' and Manager(msg) then 
-local my_ph = database:get(bot_id.."my_anamen:status"..msg.chat_id_)
-if not my_ph then
-send(msg.chat_id_, msg.id_," ◍انا مين معطله") 
-return false  
-end
-send(msg.chat_id_,msg.id_, '[ انت المدير يعني الروم تحت سيطرتك😹](t.me/ABCDABCDL)')
-return false
-end
-
-if text == 'انا مين' and Mod(msg) then
-local my_ph = database:get(bot_id.."my_anamen:status"..msg.chat_id_)
-if not my_ph then
-send(msg.chat_id_, msg.id_," ◍انا مين معطله") 
-return false  
-end
-send(msg.chat_id_,msg.id_, '[انت مجرد ادمن اجتهد عشان ياخد رتبه😹 ](t.me/ABCDABCDL)')
-return false
-end
-
-if text == 'انا مين' and Special(msg) then 
-local my_ph = database:get(bot_id.."my_anamen:status"..msg.chat_id_)
-if not my_ph then
-send(msg.chat_id_, msg.id_," ◍انا مين معطله") 
-return false  
-end
-send(msg.chat_id_,msg.id_, '[ انت مميز ابن ناس 😊 ](t.me/ABCDABCDL)')
-return false
-end
-
-if text == 'انا مين' then
-local my_ph = database:get(bot_id.."my_anamen:status"..msg.chat_id_)
-if not my_ph then
-send(msg.chat_id_, msg.id_," ◍انا مين معطله") 
-return false  
-end
-send(msg.chat_id_,msg.id_, '[انت مجرد عضو زليل حقير ملوش لزمه 😂](t.me/ABCDABCDL)')
-return false
 end
 
 if text == "تفعيل ردود السورس"  then
