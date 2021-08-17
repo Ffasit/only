@@ -13217,7 +13217,7 @@ end end
 tdcli_function ({ ID = "GetUserProfilePhotos", user_id_ = msg.sender_user_id_, offset_ = 0, limit_ = 1 }, getpro, nil) 
 end,nil)
 end
-if text == 'انا مين' and Deveban(msg) then 
+if text == 'llllkk' and Deveban(msg) then 
 local my_ph = database:get(bot_id.."my_anamen:status"..msg.chat_id_)
 if not my_ph then
 send(msg.chat_id_, msg.id_," ◍انا مين معطله") 
@@ -13230,7 +13230,7 @@ else
 username = 'SOURCEVENOM'
 end
 local msg_id = msg.id_/2097152/0.5  
-local textt = ' انت المبرمج باندا قمر التلي 🐼💜
+local textt = ' انت المبرمج باندا قمر التلي 🐼💜 '
 local Banda = 'https://t.me/Qtdao/71'
 keyboard = {} 
 keyboard.inline_keyboard = {
