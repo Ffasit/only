@@ -17338,7 +17338,11 @@ return https.request("https://api.telegram.org/bot"..token..'/editMessageText?ch
 end
 
 if Text == '/hle55' then
-local help_text = bot_data:get(ban_id..'hle55_text')
+if not Mod(data) then
+local notText = '✘ عذرا الاوامر هذه لا تخصك'
+https.request("https://api.telegram.org/bot"..token.."/answerCallbackQuery?callback_query_id="..data.id_.."&text="..URL.escape(notText).."&show_alert=true")
+return false
+end
 local Teext =[[
 💎╖ ❬ m 5 ❭ Orders of developers ⇊
 👮♂️╜ Developer »⇊
