@@ -10698,6 +10698,25 @@ end
 tdcli_function ({ID = "SearchPublicChat",username_ = TextEnd[4]}, start_function, nil)
 return false
 end
+
+if text == 'تفعيل التحقق' and CoSu(msg) then   
+if database:get(bot_id..'CAPTCHA'..msg.chat_id_) then
+Text = 'تم تفعيل التحقق'
+database:del(bot_id..'CAPTCHA'..msg.chat_id_)  
+else
+Text = ' ● بالتاكيد تم تفعيل امر التحقق'
+end
+send(msg.chat_id_, msg.id_,Text) 
+end
+if text == 'تعطيل التحقق' and CoSu(msg) then  
+if not database:get(bot_id..'CAPTCHA'..msg.chat_id_) then
+database:set(bot_id..'CAPTCHA'..msg.chat_id_,true)  
+Text = '\n ● تم تعطيل امر التحقق'
+else
+Text = '\n ● بالتاكيد تم تعطيل امر التحقق'
+end
+send(msg.chat_id_, msg.id_,Text) 
+end
 ------------------------------------------------------------------------
 if text and text:match("^تقيد (%d+)$") and Mod(msg) then
 local userid = text:match("^تقيد (%d+)$")
